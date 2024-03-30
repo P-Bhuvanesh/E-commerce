@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 const Signup = () => {
-  const [userData, setUserData] = useState({
+  const [signupData, setSignupData] = useState({
     name: "",
     email: "",
     mobileNumber: "",
     password: "",
-    confirmPassword: "",
+    confirmpassword: "",
   });
+  const success = () => toast.success("User registered successfully");
+  const error = () => toast.error("User registration failed");
   const handleChange = (e) => {
-    setUserData((prevData) => {
-      return { ...prevData, [e.target.name]: e.target.value };
+    setSignupData((prev) => {
+      return { ...prev, [e.target.name]: e.target.value }
     });
   };
   const handleSubmit = async (e) => {
@@ -22,30 +24,27 @@ const Signup = () => {
     try {
       const response = await fetch("http://127.0.0.1:8000/auth/register", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(signupData),
       });
-
-      if (!response.ok) {
-        throw new Error("Failed to register");
+      if (response.ok) {
+        success();
+        setSignupData({
+          name: "",
+          email: "",
+          mobile: "",
+          password: "",
+          confirmpassword: "",
+        })
+      } else {
+        const errorMessage = await response.text();
+        error(errorMessage);
       }
-
-      toast.success("User registered successfully");
-      console.log(userData);
-      // Bhuvi do one thing upload the code in github and sendme da ?? i'll debug with in this night 
-      setUserData({
-        name: "",
-        email: "",
-        mobileNumber: "",
-        password: "",
-        confirmPassword: "",
-      });
-    } catch (error) {
-      console.error(error);
-      toast.error("Error while registering user");
+    } catch (err) {
+      console.error(err);
+      error("Failed to submit form");
     }
   };
-
   return (
     <div className="signupcontainer">
       <div className="signupchild">
@@ -54,7 +53,7 @@ const Signup = () => {
             <input
               type="text"
               name="name"
-              value={userData.name}
+              value={signupData.name}
               placeholder="Enter Your name"
               className="signup"
               onChange={handleChange}
@@ -63,16 +62,16 @@ const Signup = () => {
             <input
               type="email"
               name="email"
-              value={userData.email}
+              value={signupData.email}
               placeholder="Enter your E-mail"
               className="signup"
               onChange={handleChange}
               required
             />
             <input
-              type="tel" // Changed type to 'tel' for mobile number
+              type="tel"
               name="mobileNumber"
-              value={userData.mobileNumber}
+              value={signupData.mobileNumber}
               placeholder="Enter the mobile Number"
               className="signup"
               onChange={handleChange}
@@ -82,7 +81,7 @@ const Signup = () => {
               type="password"
               placeholder="Enter the password"
               name="password"
-              value={userData.password}
+              value={signupData.password}
               className="signup"
               onChange={handleChange}
               required
@@ -91,9 +90,9 @@ const Signup = () => {
               type="password"
               placeholder="Re-enter the password"
               className="signup"
+              name="confirmpassword"
+              value={signupData.confirmpassword}
               onChange={handleChange}
-              name="confirmPassword"
-              value={userData.confirmPassword}
               required
             />
             <button type="submit" className="signup-btn">

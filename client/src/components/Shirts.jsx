@@ -5,64 +5,64 @@ import s3 from "../assets/Shirt3.jpg";
 import s4 from "../assets/Shirt4.jpg";
 import s5 from "../assets/Shirt5.jpg";
 import s6 from "../assets/Shirt6.jpg";
-import "../styles/Products.css";
+import "../styles/Shirts.css";
 import StarIcon from "@mui/icons-material/Star";
 import Navbar from "./Navbar";
 
-
-const Products = () => {
-  const productCatalog = [
+const Shirts = () => {
+  const shirtCatalog = [
     {
-      name: "Shirt Striped",
-      price: 1250,
+      name: "Plain Blue",
+      price: 12500,
       desc: "Lorem",
       img: s1,
       rating: 3.5,
     },
     {
-      name: "Shirt Striped",
+      name: "Formal Grey",
       price: 1250,
       desc: "Lorem",
       img: s2,
       rating: 3.8,
     },
     {
-      name: "Shirt Striped",
+      name: "Striped Dark Blue",
       price: 1250,
       desc: "Lorem",
       img: s3,
       rating: 4.1,
     },
     {
-      name: "Shirt Striped",
+      name: "Black Striped",
       price: 1250,
       desc: "Lorem",
       img: s4,
       rating: 4.6,
     },
     {
-      name: "Shirt Striped",
+      name: "Plain Black",
       price: 1250,
       desc: "Lorem",
       img: s5,
       rating: 3.8,
     },
     {
-      name: "Shirt Striped",
+      name: "Shirt Designer",
       price: 1250,
       desc: "Lorem",
       img: s6,
       rating: 3.8,
-    },    
+    },
   ];
   return (
     <>
       <Navbar />
       <div className="parent">
-        <div className="prod">Products Page</div>
+        <div className="prod">Shirts Section</div>
       </div>
+
       <div className="gallery">
-        {productCatalog.map((product) => {
+        {shirtCatalog.map((product) => {
           return (
             <div className="content">
               <img src={product.img} alt="logo" />
@@ -84,4 +84,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Shirts;

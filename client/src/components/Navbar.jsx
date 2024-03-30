@@ -9,13 +9,13 @@ const Navbar = () => {
         <h1 className="name">BB's Kart!</h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/kart">Kart</Link>
           </li>
           <li>
-            <Link to="/orders">Orders</Link>
+            <Link to="/order">Orders</Link>
           </li>
           <li>
             <Link to="/login">Logout</Link>
