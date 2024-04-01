@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   height: 500px;
+  background-color: #f2f2f2;
   width: 700px;
   border-radius: 30px;
   border: 2px solid #b6b4b4;
@@ -36,13 +37,14 @@
 }
 
 .signup-btn {
-  background-color: royalblue;
+  background-color: #2f55d4;
   margin-top: 7%;
   width: 50%;
   height: 35px;
   border: none;
   border-radius: 8px;
   position: relative;
+  font-size: medium;
   left: 25%;
   cursor: pointer;
   color: white;
@@ -54,20 +56,27 @@
   border-radius: 30px;
 }
 
-.signupright h1 {
-  position: absolute;
-  color: #f8eb93;
-  bottom: 32%;
-  right: 32%;
+.signupleft h1 {
+  color: #2f55d4;
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.signupleft p{
+  color: #c1ccf2;
+  font-size:medium;
 }
 
 .signupright p {
   position: absolute;
-  bottom: 25.5%;
-  right: 28.5%;
+  color:#2f55d4;
+  font-size: large;
+  bottom: 21.5%;
+  right: 31.5%;
 }
 .signupnew {
-    color: royalblue;
+    color: #2f55d4;
     text-decoration: none;
+    font-size: large;
   }
 

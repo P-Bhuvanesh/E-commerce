@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Login.css";
-import login from "../assets/login.jpg";
+import login from "../assets/login.png";
 import { Link } from "react-router-dom";
 const Login = () => {
   // const [email, setEmail] = useState('');
@@ -12,10 +12,10 @@ const Login = () => {
         <div className="login-child-container">
           <div className="login-left">
             <img src={login} alt="" />
-            <h1>Login</h1>
             <p>Get access to your Orders, Wishlist and Recommendations</p>
           </div>
           <div className="login-right">
+            <h1>Login</h1>
             <form>
               <input
                 type="email"
@@ -38,9 +38,9 @@ const Login = () => {
               </Link>
               <p>
                 Don't have an account?
-                <span className="login-new">
-                  <Link to="/signup"> Signup</Link>
-                </span>
+                <Link to="/signup">
+                  <span className="login-new">Signup</span>
+                </Link>
               </p>
             </form>
           </div>

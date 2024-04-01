@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Signup.css";
-import login from "../assets/login.jpg";
+import login from "../assets/signup.png";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -16,7 +16,7 @@ const Signup = () => {
   const error = () => toast.error("User registration failed");
   const handleChange = (e) => {
     setSignupData((prev) => {
-      return { ...prev, [e.target.name]: e.target.value }
+      return { ...prev, [e.target.name]: e.target.value };
     });
   };
   const handleSubmit = async (e) => {
@@ -24,7 +24,7 @@ const Signup = () => {
     try {
       const response = await fetch("http://127.0.0.1:8000/auth/register", {
         method: "POST",
-        headers: { 'Content-Type': 'application/json' },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(signupData),
       });
       if (response.ok) {
@@ -35,7 +35,7 @@ const Signup = () => {
           mobile: "",
           password: "",
           confirmpassword: "",
-        })
+        });
       } else {
         const errorMessage = await response.text();
         error(errorMessage);
@@ -49,6 +49,7 @@ const Signup = () => {
     <div className="signupcontainer">
       <div className="signupchild">
         <div className="signupleft">
+          <h1>Signup</h1>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -100,15 +101,15 @@ const Signup = () => {
             </button>
             <p>
               Already our customer ?{" "}
-              <span className="signupnew">
-                <Link to="/login">Login</Link>
-              </span>
+              <Link to="/login">
+                <span className="signupnew">Login</span>
+              </Link>
             </p>
           </form>
         </div>
         <div className="signupright">
           <img src={login} alt="signup" />
-          <h1>Signup</h1>
+
           <p>Looks like you're new here!</p>
         </div>
       </div>

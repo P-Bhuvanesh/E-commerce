@@ -9,8 +9,9 @@ function Home() {
   return (
     <div>
       <Navbar />
-      Home
+      {/* Home */}
       <Slider slides = {slides}/>
+      
     </div>
   );
 }

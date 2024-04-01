@@ -41,7 +41,7 @@
 }
 
 .login-btn {
-  background-color: royalblue;
+  background-color: #2f55d4;
   margin-top: 10%;
   width: 105%;
   height: 35px;
@@ -51,18 +51,22 @@
   right: 9%;
   cursor: pointer;
   color: #e0e0e0;
+  font-size:medium;
 }
 
 .login-new {
-  color: royalblue;
+  color: #2f55d4;
+  padding-left: 5px;
+  font-size: large;
 }
 
 .login-right p {
   margin-left: -25px;
+  color: #c1ccf2;
 }
 
 .login-left img {
-  width: 100%;
+  width: 300px;
   height: 100%;
   margin-left: 20px;
   border-radius: 30px;
@@ -70,13 +74,16 @@
 
 .login-left p {
   position: absolute;
-  bottom: 12%;
-  left: 25px;
+  bottom: 10%;
+  left: 34px;
+  color: #2f55d4;
+  font-size: large;
 }
 
-.login-left h1 {
-  position: absolute;
-  bottom: 24%;
-  left: 40%;
-  color: #f8eb93;
+.login-right h1 {
+  color: #2f55d4;
+  display: flex;
+  position: relative;
+  left: 30px;
 }
+
