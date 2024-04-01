@@ -6,13 +6,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav">
-        <h1 className="name">BB's Kart!</h1>
+        <h1 className="name">Trendify Hub</h1>
         <ul>
           <li>
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/kart">Kart</Link>
+            <Link to="/cart">Cart</Link>
           </li>
           <li>
             <Link to="/order">Orders</Link>

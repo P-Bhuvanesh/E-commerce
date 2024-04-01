@@ -4,7 +4,7 @@ const Kart = () => {
   return (
     <div>
         <Navbar />
-        Kart
+        Cart
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Shirts from "./components/Shirts";
 import Home from "./components/Home";
 import Order from "./components/Orders";
-import Kart from "./components/Kart";
+import Cart from "./components/Kart";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import "./App.css";
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/shirt" element={<Shirts />} />
         <Route path="/order" element={<Order />} />
-        <Route path="/kart" element={<Kart />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
