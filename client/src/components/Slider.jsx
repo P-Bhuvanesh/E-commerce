@@ -25,7 +25,7 @@ const Slider = ({ slides }) => {
       slidesPerView={1}
       centeredSlides={true}
       autoplay={{
-        delay: 1500,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       navigation={true}

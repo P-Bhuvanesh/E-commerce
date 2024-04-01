@@ -6,7 +6,7 @@
 }
 
 .login-child-container {
-  background-color: #f2f2f2;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 .login-left {
-  width: 40%;
+  width: 42%;
   height: 100%;
   position: relative;
   justify-content: flex-start;
@@ -74,8 +74,8 @@
 
 .login-left p {
   position: absolute;
-  bottom: 10%;
-  left: 34px;
+  bottom: 5%;
+  left: 48px;
   color: #2f55d4;
   font-size: large;
 }
