@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.home {
+    padding-top: 100px; 
+  }
+
+.home-slide
+{
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid brown;
+  background-color: aquamarine;
+}
+.home-slide .swiper-slide{
+  border: 1px solid black;
+  height: 100%;
+  background-color: #fff;
+}
+
+.home-slide .swiper-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.home-slide .swiper-wrapper img{
+  height: 80%;
+}
+
+.home-slide .navto{
+  display: inline-block;  
+  position: relative;
+  left: 78%;
+  font-weight: 700;
+  font-size: x-large;
+  padding: 10px;
+}
