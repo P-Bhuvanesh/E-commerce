@@ -21,18 +21,15 @@ const Slider = ({ slides }) => {
   return (
     <Swiper
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
+      spaceBetween={30}
       centeredSlides={true}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // }}
-      navigation={true}
-      onAutoplayTimeLeft={onAutoplayTimeLeft}
-      pagination={{ clickable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      autoplay={{
+        delay: 1500,
+        disableOnInteraction: false,
+      }}
+      // navigation={true}
+      // pagination={{ clickable: true }}
+      scrollbar = {{draggable: true}}
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.images}>
