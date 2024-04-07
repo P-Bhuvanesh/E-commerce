@@ -10,6 +10,10 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 
+app.get('/', (req, res) => {
+    res.send('hello world')
+  })
+
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Database connection established successfully"))
     .catch((err) => console.error(err));

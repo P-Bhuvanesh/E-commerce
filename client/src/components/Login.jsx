@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Login = () => {
   // const [email, setEmail] = useState('');
   // const [password, setPassword] = useState('');
-
   return (
     <div className="wrapper">
       <div className="login-container">
@@ -33,9 +32,9 @@ const Login = () => {
                 // onChange={(e) => setPassword(e.target.value)}
                 className="login"
               />
-              <Link to="/home">
-                <button className="login-btn">Login</button>
-              </Link>
+              {/* <Link to="/home"> */}
+                <button type = "submi"className="login-btn">Login</button>
+              {/* </Link> */}
               <p>
                 Don't have an account?
                 <Link to="/signup">

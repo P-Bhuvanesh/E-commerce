@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const UserSchema = require("../models/userSchema");
 
+const app = express()
+app.get('/hi',(req,res) => {
+    res.send("Hi")
+})
+
 router.post("/register", async (req, res) => {
     try {
         const { name, email, mobileNumber, password } = req.body;
