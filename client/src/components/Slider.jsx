@@ -27,8 +27,8 @@ const Slider = ({ slides }) => {
         delay: 1500,
         disableOnInteraction: false,
       }}
-      // navigation={true}
-      // pagination={{ clickable: true }}
+      navigation={true}
+      pagination={{ clickable: true }}
       scrollbar = {{draggable: true}}
     >
       {slides.map((slide) => (

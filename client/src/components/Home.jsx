@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Slider from "./Slider";
 import slides from "../mock.json";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "../styles/Slider.css";
 import {
   Autoplay,
@@ -240,8 +241,8 @@ function Home() {
             spaceBetween={30}
             slidesPerView={4}
             navigation={true}
-            // scrollbar={{ draggable: true }}
-            // pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            pagination={{ clickable: true }}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="mySwiper"
@@ -262,7 +263,7 @@ function Home() {
       </div>
       <div className="home-slide">
         Formal Comfort Shirts
-        <div className="navto">View more</div>
+        <div className="navto"><Link to = "/shirt">View more</Link></div>
         <div className="slider-content">
           <Swiper
             modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
